@@ -1,0 +1,27 @@
+{
+  "_说明": "两套经过实测验证的参数预设。切换用：python run.py preset <名字>",
+  "presets": {
+    "4H-stable": {
+      "label": "4H 稳健档（推荐实盘首选）",
+      "evidence": "BTC 4H +10.96%（年化7.89%，回撤8.00%，夏普0.74，80笔）/ ETH 4H +1.42% / SOL 4H +17.72%（夏普1.13）——三标的全盈利，样本 3000根=16.5个月",
+      "bar": "4H",
+      "inst_id": "BTC-USDT-SWAP",
+      "strategy": "trend",
+      "strategy_params": {
+        "fast": 16, "slow": 48, "regime_len": 200, "adx_len": 14, "adx_min": 18.0,
+        "atr_len": 14, "atr_mult": 2.5, "trail_mult": 5.0, "max_ext_atr": 6.0, "allow_short": true
+      }
+    },
+    "1H-aggressive": {
+      "label": "1H 进取档（收益更高，回撤更大，样本 125 天）",
+      "evidence": "BTC 1H +9.77%（年化31.30%，回撤10.06%，夏普1.29）/ ETH 1H +5.25% / SOL 1H +26.05%（年化96.65%，夏普2.85）——三标的全盈利，样本 3000根=125天",
+      "bar": "1H",
+      "inst_id": "BTC-USDT-SWAP",
+      "strategy": "trend",
+      "strategy_params": {
+        "fast": 12, "slow": 26, "regime_len": 200, "adx_len": 14, "adx_min": 28.0,
+        "atr_len": 14, "atr_mult": 2.0, "trail_mult": 5.0, "max_ext_atr": 3.0, "allow_short": true
+      }
+    }
+  }
+}

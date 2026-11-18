@@ -1,0 +1,50 @@
+{
+  "inst_id": "BTC-USDT-SWAP",
+  "bar": "4H",
+  "strategy": "trend",
+  "strategy_params": {
+    "fast": 16,
+    "slow": 48,
+    "regime_len": 200,
+    "adx_len": 14,
+    "adx_min": 18.0,
+    "atr_len": 14,
+    "atr_mult": 2.5,
+    "trail_mult": 5.0,
+    "max_ext_atr": 6.0,
+    "allow_short": true
+  },
+  "risk": {
+    "risk_pct": 1.0,
+    "max_leverage": 10.0,
+    "max_daily_loss_pct": 5.0,
+    "max_drawdown_pct": 25.0,
+    "max_positions": 1
+  },
+  "backtest": {
+    "initial_equity": 1000.0,
+    "fee_pct": 0.0005,
+    "slip_pct": 0.0002,
+    "history_bars": 1500
+  },
+  "paper": {
+    "initial_equity": 1000.0,
+    "fee_pct": 0.0005,
+    "slip_pct": 0.0002
+  },
+  "live": {
+    "enabled": false,
+    "lever": 5,
+    "td_mode": "cross",
+    "pos_mode": "net",
+    "dry_run": true,
+    "allow_short": true
+  },
+  "loop": {
+    "poll_seconds": 20,
+    "max_runtime_hours": 0
+  },
+  "hosts": [
+    "https://www.okx.com"
+  ]
+}
